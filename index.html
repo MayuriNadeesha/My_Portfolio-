@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-text">
+            <p>Web and Mobile Fullstack Developer</p>
+            <h1>Hi, I'm <span>Mayuri</span><br>Nadeesha From Sri lanka</h1>
+        </div>
+    </div>
+
+    <!------------about------------>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/Image2.png" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hello! I am an ambitious undergraduate student pursuing a BSc (Hons) in Computing and Information Systems at Sabaragamuwa University of Sri Lanka. My academic journey is shaping my understanding of diverse computing facets, and I'm particularly drawn to the dynamic world of full-stack development, encompassing both web and mobile applications. Eager to learn and passionate about technology, I'm excited to contribute my skills and make a significant impact in this ever-evolving field.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web development</span><br>Web app development</li>
+                            <li><span>App development</span><br>Building Android/iOS apps</li>
+                            <li><span>UI/UX</span><br>Designing web/App Interfaces</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2018 - 2019</span><br>School leaver trainee at Regional Development Bank, Akuressa </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020 - present</span><br>Following BSc (Hons) in Computing and Information Systems, Faculty of Computing, <b>Sabaragamuwa University of Sri Lanka</b></li>
+                            <li><span>2018</span><br>Followed G.C.E. Advanced Level Examination Physical Science Stream at <b>MR/ Godapitiya National School, Akuressa</b></li>
+                            <li><span>2019</span><br>Completed National Vocational Qualification in Information and Communication Technology Technician (NVQ Level 4) conducted by <b>National Youth Services Council</b></li>
+                            <li><span>2019</span><br>completed English course conducted by <b>The Beeline English Academy</b></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+        
+    </script>
+    
+</body>
+</html>
