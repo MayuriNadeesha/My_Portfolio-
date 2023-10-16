@@ -18,7 +18,9 @@
                     <li><a href="#Services">Services</a></li>
                     <li><a href="#portfolio">portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
         </div>
        
@@ -212,24 +214,25 @@
         }
     </script>
 
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzRkMPJWpM-Snus_Md2tgEcO8GmFtMp_QkvgYAB2iKOuSISRDV9Evn70hE4-X39ViOMhg/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("msg")
-    
-        form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                msg.innerHTML = "Message sent successfully"
-                setTimeout(function(){
-                    msg.innerHTML = ""
-                },5000)
-                form.reset()
-            })
-            .catch(error => console.error('Error!', error.message))
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxX_YneDZ8gvc9oO1JwIQySZTU6zcH5LDTyCoThmvsWN8MeQCVzAHzekZMX3BN13DWv5A/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML =""
+            },5000)
+            form.reset()
         })
-    </script>
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
     
 </body>
 </html>

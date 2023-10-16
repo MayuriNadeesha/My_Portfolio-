@@ -384,8 +384,114 @@ form .btn2{
     cursor: pointer;
 }
 
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+}
+
 /*----------------------CSS for small screens-------------------------*/
+nav .fa-solid {
+    display: none;
+}
 
 @media only screen and (max-width: 600px) {
+    #header{
+        background-image: url(Images/Image.png);
+    }
+
+    .header-text{
+        margin-top: 40%;
+        font-size: 16px;
+        color: #ff004f;
+    }
+
+    .header-text h1 span{
+        color:#ababab;
+    }
+
+    .header-text h1{
+        font-size: 30px;
+    }
+
+    nav .fa-solid {
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        flex-direction: column;
+        width: 200px;
+        align-items: flex-start;
+        transition: right 0.5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fa-solid {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+   /*-----------About me-----------*/
+    .sub-title{
+        font-size: 40px;
+    }
+
+    .about-col-1, .about-col-2{
+        flex-basis: 60%;
+        justify-content: center;
+    }
+
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+
+    .about-col-2{
+        font-size: 14px;
+    }
+
+    .tab-links{
+        font-size: 16px;
+    }
+
+
+    /*------------Services------------*/
+
+    .services-list .container{
+        flex-direction: column;
+    }
+
+    .services-list .container .column{
+        margin-bottom: 5%;
+    }
+
+     /*------------Portfolio------------*/
+
+    .work-list .container{
+        flex-direction: column;
+    }
+
+    .work-list .container .work{
+        margin-bottom: 10%;
+    }
+
+    /*-----------Contact-----------*/
+
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
 
 }
