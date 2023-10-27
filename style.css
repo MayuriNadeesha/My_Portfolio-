@@ -241,8 +241,9 @@ nav ul li a:hover::after{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
-    margin-top: 50px;
+    margin-top: 50px;  
 }
+
 
 .work .image-container {
     position: relative;
@@ -278,10 +279,17 @@ nav ul li a:hover::after{
     height: 100%;
 }
 
-.work .overlay h3,
+.work .overlay h3{
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-size: 25px;
+}
+
 .work .overlay p {
     font-weight: 500;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    text-align: center;
 }
 
 .work .overlay a {
@@ -296,6 +304,7 @@ nav ul li a:hover::after{
     border-radius: 50%;
     text-align: center;
 }
+
 
 .work .image-container:hover img {
     transform: scale(1.1);
@@ -317,6 +326,7 @@ nav ul li a:hover::after{
 .btn:hover{
     background: #ff004f;
 }
+
 
 /*----------------------Contact-------------------------*/
 
@@ -397,17 +407,19 @@ nav .fa-solid {
 
 @media only screen and (max-width: 600px) {
     #header{
-        background-image: url(Images/Image.png);
+        background-image: url(Images/Image7.jpeg);
+
+
     }
 
     .header-text{
         margin-top: 40%;
         font-size: 16px;
-        color: #ff004f;
+        color: fff;
     }
 
     .header-text h1 span{
-        color:#ababab;
+        color:#ff004f;
     }
 
     .header-text h1{
@@ -487,6 +499,11 @@ nav .fa-solid {
     .work-list .container .work{
         margin-bottom: 10%;
     }
+
+    .work-list-second {
+        margin-top: -20px;
+    }
+    
 
     /*-----------Contact-----------*/
 
